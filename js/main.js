@@ -7,7 +7,8 @@ splitText(tits[0]); //인수로 h1 DOM 자체를 전달
 splitText(tits[1]);
 
 btns.forEach((btn, idx) => {
-	btn.addEventListener('click', () => {
+	btn.addEventListener('click', (e) => {
+		if (e.currentTarget.classList.contains('on')) return;
 		activation(btns, idx);
 		activation(boxes, idx);
 	});
