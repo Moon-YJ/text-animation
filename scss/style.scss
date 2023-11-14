@@ -37,7 +37,7 @@ main {
 			opacity: 0;
 			h1 {
 				span {
-					display: inline-block;
+					display: inline-block; //transform 속성은 inline요소에 적용되지 않으므로 inline-block 처리
 					transform: scale(2);
 					opacity: 0;
 					transition-duration: 1s;
