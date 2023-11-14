@@ -1,2 +1,43 @@
 @import 'reset';
 @import 'variable';
+
+main {
+	position: relative;
+	width: 800px;
+	height: 400px;
+	margin: 100px auto;
+	border: 1px solid #333;
+	.btns {
+		z-index: 2;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		display: flex;
+		gap: 40px;
+		li {
+			font: bold 1.5rem/1 'arial';
+			color: #bbb;
+			cursor: pointer;
+			&.on {
+				color: #222;
+			}
+		}
+	}
+	.box {
+		article {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			font-size: 4rem;
+			opacity: 0;
+			&.on {
+				opacity: 1;
+			}
+		}
+	}
+}

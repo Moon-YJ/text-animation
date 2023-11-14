@@ -13,6 +13,16 @@ a {
   font-weight: inherit;
 }
 
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
 :root {
   --titColor: #111;
   --bodyColor: #555;
@@ -23,6 +33,45 @@ a {
 
 html {
   font-size: 16px;
+}
+
+main {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 100px auto;
+  border: 1px solid #333;
+}
+main .btns {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  gap: 40px;
+}
+main .btns li {
+  font: bold 1.5rem/1 "arial";
+  color: #bbb;
+  cursor: pointer;
+}
+main .btns li.on {
+  color: #222;
+}
+main .box article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  opacity: 0;
+}
+main .box article.on {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
