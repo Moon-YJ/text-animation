@@ -3,8 +3,8 @@ const btns = main.querySelectorAll('.btns li');
 const boxes = main.querySelectorAll('article');
 const tits = main.querySelectorAll('h1');
 
-splitText(tits[0]); //인수로 h1 DOM 자체를 전달
-splitText(tits[1]);
+splitText(tits[0], 0.2); //인수로 h1 DOM 자체를 전달
+splitText(tits[1], 0);
 
 btns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
@@ -20,8 +20,12 @@ function activation(arr, idx) {
 }
 
 // DOM 자체를 인수로 받음
-function splitText(el) {
+function splitText(el, interval) {
 	let tags = '';
-	for (let letter of el.innerText) tags += `<span>${letter}</span>`;
+	let count = 0;
+	for (let letter of el.innerText) {
+		tags += `<span style='transition-delay:${interval * count}s;'>${letter}</span>`;
+		count++;
+	}
 	el.innerHTML = tags;
 }

@@ -71,17 +71,19 @@ main .box article {
   opacity: 0;
 }
 main .box article h1 span {
-  display: inline-block;
-  transform: scale(2);
   opacity: 0;
+  display: inline-block;
+  color: #eee;
+  transform: scale(2) rotate(120deg) translateX(100px);
   transition-duration: 1s;
 }
 main .box article.on {
   opacity: 1;
 }
 main .box article.on h1 span {
-  transform: scale(1);
   opacity: 1;
+  color: #222;
+  transform: scale(1) rotate(0deg) translateX(0);
 }
 
 /*# sourceMappingURL=style.css.map */

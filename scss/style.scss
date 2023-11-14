@@ -37,9 +37,10 @@ main {
 			opacity: 0;
 			h1 {
 				span {
-					display: inline-block; //transform 속성은 inline요소에 적용되지 않으므로 inline-block 처리
-					transform: scale(2);
 					opacity: 0;
+					display: inline-block; //transform 속성은 inline요소에 적용되지 않으므로 inline-block 처리
+					color: #eee;
+					transform: scale(2) rotate(120deg) translateX(100px);
 					transition-duration: 1s;
 				}
 			}
@@ -47,8 +48,9 @@ main {
 				opacity: 1;
 				h1 {
 					span {
-						transform: scale(1);
 						opacity: 1;
+						color: #222;
+						transform: scale(1) rotate(0deg) translateX(0);
 					}
 				}
 			}
