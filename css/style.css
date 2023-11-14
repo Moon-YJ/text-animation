@@ -70,7 +70,17 @@ main .box article {
   font-size: 4rem;
   opacity: 0;
 }
+main .box article h1 span {
+  display: inline-block;
+  transform: scale(2);
+  opacity: 0;
+  transition-duration: 1s;
+}
 main .box article.on {
+  opacity: 1;
+}
+main .box article.on h1 span {
+  transform: scale(1);
   opacity: 1;
 }
 
